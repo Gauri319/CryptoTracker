@@ -1,4 +1,4 @@
-import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Common/Header";
 import Tabs from "../Components/DashBoard/Tab";
@@ -8,10 +8,11 @@ function DashboardPage() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(APi_Url)
+      fetch(APi_Url)
       .then((response) => {
-        setData(response.data);
+        return response.json
+      }).then((data)=>{
+        setData(data);
       })
       .catch((error) => {
         alert("Error>>>", error);
