@@ -1,0 +1,24 @@
+.btn{
+    background-color: var(--blue);
+    color:var(--white); 
+    padding: 0.5rem 1rem; 
+    border-radius: 30px;
+}
+.btn:hover{
+    background-color: var(--black);
+    border: 2px solid  var(--blue);
+    box-shadow: 0px 0px 5px rgb(81, 81, 193);
+    transition: all 0.1s;
+}
+.outlinedbtn{
+    background-color: var(--black);
+    color:var(--white); 
+    border: 2px solid var(--blue);
+    padding: 0.5rem 1.8rem; 
+    border-radius: 30px;
+    box-shadow: 2px 2px 6px rgb(81, 81, 193);
+}
+.outlinedbtn:hover{
+    background-color: var(--blue);
+    transition: all 0.1s;
+}
