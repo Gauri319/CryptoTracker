@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import Header from "../Components/Common/Header";
 import Tabs from "../Components/DashBoard/Tab";
@@ -10,9 +9,11 @@ function DashboardPage() {
   useEffect(() => {
       fetch(APi_Url)
       .then((response) => {
-        return response.json
-      }).then((data)=>{
-        setData(data);
+        return response.json();
+      }).then((data1)=>{
+
+        console.log(data1)
+        setData(data1)
       })
       .catch((error) => {
         alert("Error>>>", error);
