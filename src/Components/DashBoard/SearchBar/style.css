@@ -1,0 +1,33 @@
+.search-wrapper{
+    background-color: var(--darkgrey);
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border-radius: 2rem;
+    margin: auto;
+    padding: 0.5rem 1rem;
+    border: 0.1px solid var(--grey);
+}
+.search-wrapper input{
+    width: 100%;
+    background-color: var(--darkgrey);
+  
+    color: var(--white);
+    border: none;
+    padding:0.2rem 0.5rem;
+
+
+}
+.search-wrapper input:focus{
+    outline: none;
+}
+.search-icon{
+    color: var(--grey);
+}
+@media only screen and (max-width: 800px) {
+    .search-wrapper{
+        width: 80%;
+    }
+  }

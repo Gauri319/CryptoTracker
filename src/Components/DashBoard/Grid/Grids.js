@@ -1,17 +1,23 @@
 import React from "react";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
-
+import {motion} from 'framer-motion';
+import { Tooltip } from "@mui/material";
 import "./Grids.css";
-function Grids({ coin }) {
+function Grids({ coin,delay}) {
   return (
-    <div
+    <motion.div
+        initial={{ y: 60, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.3, delay: delay }}
       className={`grid-box ${
         coin.price_change_percentage_24h < 0 && "grid-box-red"
       }`}
     >
       <div className="info-flex">
+        <Tooltip title="logo">
         <img src={coin.image} className="coin-logo" alt="icon" />
+        </Tooltip>
         <div className="name-flex">
           <p className="coin-symbol">{coin.symbol}-USD</p>
           <p className="coin-name">{coin.name}</p>
@@ -53,7 +59,7 @@ function Grids({ coin }) {
           {coin.market_cap.toLocaleString()}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

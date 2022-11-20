@@ -1,0 +1,108 @@
+.list-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 1rem 0rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.list-row:hover {
+  background-color: var(--darkgrey);
+  border: 1px solid var(--green);
+}
+.list-box-red:hover{
+  background-color: var(--darkgrey);
+  border: 1px solid var(--red);
+}
+.list-row td {
+  text-align: left;
+  width: 18%;
+}
+
+.td-chip-flex {
+  width: 10rem;
+}
+
+.td-image img {
+  width: 3rem;
+}
+
+.td-text{
+  min-width: 25% !important;
+}
+.td-name-flex {
+  min-width: 100px;
+}
+
+.td-vol-cap {
+  display: none;
+}
+
+@media only screen and (max-width:900px) {
+  .td-mkt-cap {
+    display: none;
+  }
+
+  .td-vol-cap {
+    display: block;
+  }
+}
+
+@media only screen and (max-width:801px) {
+  .list-row {
+    padding: 0.5rem 0px;
+    gap: 0.1rem;
+  }
+
+  .chip-icon {
+    display: none !important;
+  }
+  .price{
+    font-size: 70% !important;
+  }
+  .td-chip-flex {
+    min-width: 0rem;
+  }
+
+  .percentage-text {
+    font-size: 50%;
+    margin: 0;
+    padding: 0.2rem 0.3rem;
+  }
+  .td-image {
+    width:min-content !important;
+  }
+  .td-name-flex {
+    min-width: 0px;
+  }
+
+  .td-image img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .td-price{
+    font-size:90% !important;
+  }
+  .name-text,
+  .td-vol-cap {
+    font-size: 70%;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .list-row {
+    padding:0.5rem 0px;
+    margin: 0.5rem 0rem;
+    gap: 0.1rem;
+  }
+   .percentage-text {
+    font-size: 50%;
+  }
+ 
+
+}

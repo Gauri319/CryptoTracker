@@ -3,9 +3,11 @@
 :root {
   --white: #fff;
   --black: #111;
-  --blue: #3a80e9;
+  --blue: #a9c303;
   --grey: #888;
-  --darkgrey:rgb(34, 33, 33);
+  --darkgrey: #1b1b1b;
+  --green: #61c96f;
+  --red: #f94141;
 }
 
 body {
@@ -47,4 +49,17 @@ img {
 
 a {
   text-decoration: none;
+}
+.gotoTopBtn{
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  background-color: var(--darkgrey);
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  padding: 0.6rem;
+  cursor: pointer;
+}
+.gototopbtnIcon{
+  color: var(--blue);
 }

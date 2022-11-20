@@ -1,0 +1,18 @@
+.grid-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 2rem;
+  }
+  .list-flex{
+    width:90%;
+    margin: 1rem auto;
+    display: block;
+ }
+ @media only screen and (max-width:801px) {
+  .list-flex{
+    width:100%;
+ }
+ }

@@ -4,7 +4,8 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { createTheme, ThemeProvider } from "@mui/material";
-import Grids from "./Grids";
+import Grids from "../Grid/Grids";
+import Lists from "../List";
 import "./Tabs.css";
 export default function Tabs({ data }) {
   const [tabValue, setTabValue] = useState("grid");
@@ -25,7 +26,7 @@ export default function Tabs({ data }) {
   const theme = createTheme({
     palette: {
       primary: {
-        main: "#3a80e9",
+        main: "#a9c303",
       },
     },
   });
@@ -43,11 +44,17 @@ export default function Tabs({ data }) {
           <TabPanel value={"grid"}>
             <div className="grid-flex">
               {data.map((item, i) => (
-                <Grids coin={item} key={i}/>
+                <Grids coin={item} key={i} delay={(i % 5) * 0.1}/>
               ))}
             </div>
           </TabPanel>
-          <TabPanel value={"list"}></TabPanel>
+          <TabPanel value={"list"}>
+          <table className="list-flex">
+              {data.map((item, i) => (
+                <Lists coin={item} key={i} delay={(i % 7) * 0.1}/>
+              ))}
+            </table>
+          </TabPanel>
         </TabContext>
       </ThemeProvider>
     </div>
