@@ -1,0 +1,22 @@
+.footer-container{
+    margin: 10px auto;
+    background-color: var(--darkgrey);
+    padding: 20px;
+}
+.Footer-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    padding: 10px auto ;
+}
+hr{
+    border:1px solid var(--blue);
+    background-color: var(--blue);
+    margin:10px auto;
+    width: 20%;;
+}
+.Footer-content{
+    text-align: center;
+    padding:10px;
+}

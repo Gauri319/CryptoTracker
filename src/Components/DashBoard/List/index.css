@@ -8,6 +8,7 @@
   border-radius: 1rem;
   cursor: pointer;
   transition: all 0.3s;
+  min-width: 100%;
 }
 
 .list-row:hover {
@@ -32,7 +33,7 @@
 }
 
 .td-text{
-  min-width: 25% !important;
+  min-width:13% !important;
 }
 .td-name-flex {
   min-width: 100px;

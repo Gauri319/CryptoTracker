@@ -9,13 +9,26 @@
   --green: #61c96f;
   --red: #f94141;
 }
+[data-theme="light"] {
+  --white: #ffffff;
+  --black: #111;
+  --grey: #888;
+  --darkgrey: #1b1b1b;
+}
+
+[data-theme="dark"] {
+  --white: #111;
+  --black: #fff;
+  --grey: #888;
+  --darkgrey: #e3e2e2;;
+}
 
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: var(--black);
   color: var(--white);
 }
@@ -62,4 +75,35 @@ a {
 }
 .gototopbtnIcon{
   color: var(--blue);
+}
+
+a{
+  color: var(--white);
+}
+.sub-containers{
+  background-color: var(--darkgrey);
+  width: 90%;
+  border-radius: 1.5rem;
+  padding: 1rem 1rem;
+  margin:0.8rem  auto;
+}
+
+.compare-div{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  margin:1.5rem 3.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .gotoTopBtn{
+    right: 0.5rem;
+    bottom: 0.5rem;
+
+  }
+  .compare-div{
+    gap: 0.5rem;
+    margin:1.5rem 1rem;
+  }
 }

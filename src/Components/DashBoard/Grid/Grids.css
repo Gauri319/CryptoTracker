@@ -116,6 +116,9 @@
     border: 2px solid var(--red);
     transition: all 0.3s;
   }
+  .outlined_star,.filled_star{
+    color: var(--blue);
+  }
   
   @media only screen and (max-width: 800px) {
     .info-flex {
@@ -123,5 +126,8 @@
     }
     .coin-chip{
        min-width: 0px;
+    }
+    .outlined_star,.filled_star{
+      font-size: 20px;
     }
   }

@@ -1,0 +1,8 @@
+.desc-links a{
+   color:var(--blue);
+   text-decoration: underline;
+}
+.desc-links{
+    margin:0.5rem  1rem;
+    padding: 0.2rem;
+}

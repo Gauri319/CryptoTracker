@@ -44,15 +44,15 @@ export default function Tabs({ data }) {
           <TabPanel value={"grid"}>
             <div className="grid-flex">
               {data.map((item, i) => (
-                <Grids coin={item} key={i} delay={(i % 5) * 0.1}/>
+                <Grids coin={item} key={i} delay={(i % 5) * 0.1} />
               ))}
             </div>
           </TabPanel>
           <TabPanel value={"list"}>
-          <table className="list-flex">
-              {data.map((item, i) => (
-                <Lists coin={item} key={i} delay={(i % 7) * 0.1}/>
-              ))}
+            <table className="list-flex">
+                {data.map((item, i) => (
+                  <Lists coin={item} key={i} delay={(i % 7) * 0.1} />
+                ))}
             </table>
           </TabPanel>
         </TabContext>

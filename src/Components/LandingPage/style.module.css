@@ -4,15 +4,15 @@
 }
 
 .landingpagecontainer {
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 .heding1,
 .heding2 {
-    font-size: 4rem;
+    font-size: 5.5rem;
     font-weight: 700;
     color: var(--white);
-    margin: 5px;
+    margin-bottom: 5px;
 }
 
 .heding1:hover {
@@ -40,49 +40,129 @@
 }
 
 .mainContainer {
-    background-image: url(../../assets/cryptoBackground.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
+    background-color: var(--black);
 }
-
+.contentContainer{
+    padding-top: 50px;
+}
 .crypto4Img {
-    background-image: linear-gradient(to right, rgba(12, 11, 11, 0), rgba(12, 11, 11, 0.3));
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    padding: 20px;
+    margin: 50px auto;
 }
 
 .crypto4Img img {
-    width: 70%;
-    filter: drop-shadow(-5px 40px 5px #020247);
-
+    width: 50%;
+    margin-top: 30px;
+    filter: drop-shadow(10px 50px 50px var(--blue)) drop-shadow(0 -6mm 100px rgb(255, 187, 0));
 }
-.crypto4Img::before{
-    content: '';
+
+.counterContainer {
+    background-color: var(--darkgrey);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -30px;
+    left: 13%;
+    z-index: 2;
+}
+
+.counter {
+    border: 0.3px solid var(--grey);
+    text-align: center;
+    padding: 20px;
+}
+
+.counterMainCoitainer {
+    border: 2px solid var(--blue);
+    border-radius: 30px;
+    position: relative;
+    z-index: 1;
+    margin: 50px auto;
     width: 70%;
-    height: 100%;
-    background-color: rgb(24, 24, 22);
-    opacity: 0.3;
-    border-radius: 50%;
-    border: 3px dashed rgb(177, 177, 3);
-    animation: Rotate 20s infinite linear;
-   margin: auto;
 }
 
+.CounterContent {
+    margin-top: 5%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
 
-@keyframes Rotate{
-   
-    from {
-        transform: rotate(0deg);
+@media only screen and (max-width: 900px) {
+
+    .contentContainer {
+        text-align: center;
     }
-    to {
-        transform: rotate(360deg);
+    .buttons {
+        justify-content: center;
+    }
+    .crypto4Img {
+        margin: 100px auto;
+    }
+    
+    .crypto4Img img {
+        width: 50%;
+    }
+
+    .counterMainCoitainer {
+        width: 90%;
+    }
+
+    .CounterContent {
+        margin-top:5%;
+        gap: 12px;
+    }
+    .counter{
+         padding: 10px;
+      }
+    .counter h1{
+      font-size: 1.5rem;
+    }
+    .counter p{
+        font-size: 0.8rem;
+      }
+}
+@media only screen and (max-width: 600px) {
+     .heding1,.heding2{
+        font-size: 3.5rem;
+     }
+     .para, .CounterContent p{
+        font-size: 0.8rem;
+     }
+    .contentContainer {
+        text-align: center;
+    }
+
+    .crypto4Img img {
+        width: 70%;
+    }
+
+    .counterMainCoitainer {
+        width: 95%;
+    }
+
+    .CounterContent {
+        margin-top:7%;
+    }
+    .CounterContent h1{
+        font-size: 1.5rem;
     }
 }
+@media only screen and (max-width: 390px) {
+    .heding1,.heding2{
+       font-size: 2.8rem;
+    }
+    .para{
+       font-size: 0.8rem;
+    }
+    .counter h1,.CounterContent h1{
+        font-size: 1rem;
+      }
+    .counter p,.CounterContent p{
+          font-size: 0.5rem;
+    }
+}    
